@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FOLD FAB | Luxury Wardrobes</title>
+
+<style>
+:root {
+    --dark-gold: #916f1a;
+    --deep-bronze: #4a370a;
+    --soft-gold: #c5a059;
+    --black: #0a0a0a;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Times New Roman', serif;
+    background: radial-gradient(circle, #6e5518 0%, #4a370a 100%);
+    background-attachment: fixed;
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    background: var(--black);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img { height: clamp(60px, 10vw, 150px); }
+
+nav a {
+    color: var(--soft-gold);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid var(--soft-gold);
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+/* HERO */
+.hero {
+    height: 500px;
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+    url("https://images.unsplash.com/photo-1595428774223-ef52624120d2");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--soft-gold);
+    padding: 0 20px;
+}
+
+.hero h1 { font-size: clamp(40px, 8vw, 60px); margin: 0; }
+.hero p { font-size: clamp(18px, 3vw, 22px); margin-top: 15px; }
+
+/* GRID SYSTEM - FIXES MOBILE ALIGNMENT */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section h2 {
+    color: var(--soft-gold);
+    font-size: clamp(28px, 5vw, 40px);
+    margin-bottom: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: rgba(0,0,0,0.8);
+    border: 1px solid var(--soft-gold);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card h3 { color: var(--soft-gold); margin: 0; }
+
+/* ABOUT SECTIONS - RESTORED FULL TEXT */
+.about-wrap {
+    background: #ffffff;
+    color: #333;
+    padding: 60px 20px;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; /* Fixed stacking for mobile */
+    gap: 50px;
+}
+
+.about-left, .about-right { flex: 1; min-width: 300px; text-align: left; }
+
+.about-title { font-size: 36px; color: #000; font-weight: bold; }
+.gold-line { width: 60px; height: 3px; background: var(--soft-gold); margin: 15px 0 30px; }
+
+.about-left h4 { font-size: 14px; letter-spacing: 1px; color: #000; margin-top: 25px; }
+.about-left p, .about-right p { font-size: 15px; line-height: 1.8; margin-bottom: 20px; }
+
+/* CTA */
+.cta {
+    background: linear-gradient(135deg, #3a2a05, #916f1a);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.cta h2 { color: var(--white); font-size: clamp(24px, 5vw, 38px); margin-bottom: 25px; }
+.cta a {
+    display: inline-block;
+    padding: 18px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--black);
+    text-decoration: none;
+    background: linear-gradient(135deg, #f3d27a, #c5a059);
+    border-radius: 40px;
+    box-shadow: 0 0 20px rgba(197,160,89,0.5);
+}
+
+/* FOOTER */
+footer {
+    background: #111111;
+    color: #ffffff;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+footer img { height: 120px; }
+
+@media (max-width: 600px) {
+    .about-container { flex-direction: column; }
+    footer { flex-direction: column; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" alt="FOLD FAB Logo">
+    <nav><a href="https://wa.me/917977597745">ENQUIRE NOW</a></nav>
+</header>
+
+<section class="hero">
+    <h1>FOLD FAB</h1>
+    <p>Designed for your space. Crafted for your life.</p>
+</section>
+
+<section class="section">
+    <h2>Premium Wardrobes</h2>
+    <div class="grid">
+        <div class="card"><img src="wardrobe1.jpg" alt="Wardrobe"><h3>Customized Wardrobe</h3></div>
+        <div class="card"><img src="wardrobe2.jpg" alt="Wardrobe"><h3>Customized Wardrobe</h3></div>
+        <div class="card"><img src="wardrobe3.jpg" alt="Wardrobe"><h3>Customized Wardrobe</h3></div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Sliding Systems</h2>
+    <div class="grid">
+        <div class="card"><img src="slider1.jpg" alt="Slider"><h3>Soft Close Sliders</h3></div>
+        <div class="card"><img src="slider2.jpg" alt="Slider"><h3>Soft Close Sliders</h3></div>
+        <div class="card"><img src="slider3.jpg" alt="Slider"><h3>Soft Close Sliders</h3></div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Shadow Fit Systems</h2>
+    <div class="grid">
+        <div class="card"><img src="shadowfit1.jpg" alt="Shadow Fit"><h3>Premium Shadow Fit</h3></div>
+        <div class="card"><img src="shadowfit2.jpg" alt="Shadow Fit"><h3>Premium Shadow Fit</h3></div>
+        <div class="card"><img src="shadowfit3.jpg" alt="Shadow Fit"><h3>Premium Shadow Fit</h3></div>
+    </div>
+</section>
+
+<section class="about-wrap">
+    <div class="about-container">
+        <div class="about-left">
+            <div class="about-title">Why Choose Us?</div>
+            <div class="gold-line"></div>
+
+            <h4>OUR PURPOSE</h4>
+            <p>Our aim is to deliver premium customized steel wardrobes that combine durability, functionality, and peace of mind.</p>
+
+            <h4>CUSTOMIZED STEEL WARDROBES FROM A–Z</h4>
+            <p>From design to fabrication and installation, we provide complete end-to-end wardrobe solutions.</p>
+
+            <h4>DEEP INDUSTRY KNOWLEDGE</h4>
+            <p>Years of hands-on experience ensure better space optimization and long-lasting performance.</p>
+
+            <h4>WE ARE ALWAYS IMPROVING</h4>
+            <p>Precision manufacturing, modern tools, and strict quality checks define our work.</p>
+
+            <h4>JUST A SINGLE CHANCE</h4>
+            <p>All we ask for is a single chance to serve you! That's the only thing we require from your side.</p>
+        </div>
+
+        <div class="about-right">
+            <div class="about-title">Who We Are</div>
+            <div class="gold-line"></div>
+
+            <p>Fold Fab is a specialized brand focused on designing and manufacturing premium customized steel wardrobes for modern Indian homes. Built on the principles of durability, precision, and clean design, we create wardrobe solutions that balance strength with everyday elegance.</p>
+
+            <p>With a strong presence across Mumbai, Thane, and surrounding regions, Fold Fab has successfully delivered customized steel wardrobes for a wide range of residential spaces. Each project reflects our commitment to quality craftsmanship, thoughtful space planning, and long-term reliability.</p>
+
+            <p>We work exclusively with mild steel, offering a superior alternative to conventional wooden wardrobes. Our wardrobes are designed to withstand time, usage, and changing lifestyles — while maintaining a refined, contemporary finish.</p>
+
+            <p>At Fold Fab, we focus on understanding client requirements in detail and executing every project with accuracy and care. From design to installation, our goal is simple: deliver wardrobes that meet the highest standards and exceed expectations.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Let’s Build Your Dream Wardrobe</h2>
+    <a href="https://wa.me/917977597745">WHATSAPP US</a>
+</section>
+
+<footer>
+    <img src="logo.png" alt="FOLD FAB Logo">
+    <div>
+        <strong>FOLD FAB</strong><br>
+        Dombivli MIDC Phase II<br>
+        Call: +91 79775 97745
+    </div>
+</footer>
+
+</body>
+</html>
